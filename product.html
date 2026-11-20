@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get the Manual — AI Parenting Reset</title>
+    <meta name="description" content="Download the 7-Day Parenting Manual. Reduce screen time, end tantrums, fix sleep.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">AI Parenting Manual</a>
+        <a href="product.html" class="nav-link active">Get the Manual</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+    </nav>
+
+    <section class="checkout">
+        <div class="checkout-container">
+            <div class="checkout-left">
+                <h1>Get Instant Access</h1>
+                <div class="product-summary">
+                    <h2>7-Day Parenting Reset Manual</h2>
+                    <div class="price">$27.00</div>
+                    <ul class="product-includes">
+                        <li>📄 PDF download (instant, 24/7)</li>
+                        <li>📅 Day-by-day action plan</li>
+                        <li>💬 Exact scripts for tantrums & screen fights</li>
+                        <li>🌙 Sleep routine templates</li>
+                        <li>📋 Printable checklists</li>
+                        <li>🔄 Lifetime updates</li>
+                    </ul>
+                    <div class="guarantee-badge">
+                        <strong>🛡️ 30-Day Money-Back Guarantee</strong>
+                        <p>If it doesn't help, email us and get a full refund. No questions asked.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-right">
+                <form id="checkout-form">
+                    <h3>Payment Details</h3>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name (optional)</label>
+                        <input type="text" id="name" name="name" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="payment">Payment Method</label>
+                        <select id="payment" name="payment">
+                            <option value="stripe">Credit/Debit Card (Stripe)</option>
+                            <option value="paypal">PayPal</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary btn-large">
+                        Pay $27 & Get Instant Access →
+                    </button>
+                    <p class="secure-note">🔒 Secure checkout. We don't store your card details.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 AI Parenting Manual. All rights reserved.</p>
+        <p><a href="index.html">Home</a> · <a href="blog.html">Blog</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('checkout-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            btn.textContent = 'Processing...';
+            btn.disabled = true;
+            // TODO: Integrate with Stripe/PayPal
+            // After payment success, redirect to download page
+            alert('Payment integration not yet configured. Connect Stripe/PayPal keys in product.html settings.');
+        });
+    </script>
+</body>
+</html>
